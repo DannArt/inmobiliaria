@@ -1,0 +1,232 @@
+<div id="inicio" class="parallax">
+		
+		<div class="col-lg-6">
+			<h1><span>ENCUENTRA</span> EL LUGAR <span>PERFECTO</span> PARA TI </h1>
+			<h3>Propiedades en renta y venta</h3>
+			<form action="">
+				 <div class="input-group">
+			      	<input type="text" class="form-control" placeholder="Comenzar a buscar...">
+			      	<span class="input-group-btn">
+				     	<button class="btn btn-secondary" type="button">	Ir
+				     	</button>
+			        </span>
+			    </div>
+			</form>
+		</div>
+		<div class="mensaje hide">
+				<a href="#" class="closebtn">×</a>
+				<div >
+					<p >{{mensajeCe}}</p>
+					<div class="text-center">
+						<a href="#/cercano">Ir </a>
+					</div>
+					
+				</div>
+		</div>	
+	</div>
+	<div id="destacados" >
+		<div class="title" data-scrollmagic>
+			<div>
+				<h1>
+					Propiedades en venta destacadas 
+				</h1>
+			</div>
+		</div>
+		<div class="row" data-ng-repeat="a in ultimos track by $index">
+			<div>
+				<div class="contentA" data-scrollmagic ng-show="$first">
+					<div class="img">
+						<a href="#/item/{{ultimos[0].idCasa}}">
+							<img src="{{ultimos[0].img}}" alt="">
+						</a>
+					</div>
+					<div class="content">
+						<h2>
+							Precio
+						</h2>
+						<h1>
+							$ {{ultimos[0].precio | number}}
+						</h1>
+						<h3>
+							{{ultimos[0].sub}}...
+						</h3>
+						<h4>
+							{{ultimos[0].nombremunicipio}}, Edo. de México
+						</h4>
+						<p>
+							Y  viéndole don Quijote de aquella manera, con muestras de tanta tristeza, le dijo: Sábete, Sancho, que no es un hombre más que otro si no hace más que otro ...
+						</p>
+					</div>
+				</div>
+					
+			</div>
+		</div>
+		<div class="row">
+			<div class="contentB">
+				<div class="col-lg-3 col-md-3 col-sm-3" data-scrollmagic>
+					<div class="img_sub">
+						<a href="#/item/{{ultimos[1].idCasa}}" >
+							<img src="{{ultimos[1].img}}" alt="">
+						</a>
+						
+					</div>
+					<div class="content-down">
+						<p>{{ultimos[1].sub}}...</p>
+						<p>{{ultimos[1].nombremunicipio}}</p>
+					</div>
+					<div class="content-front">
+						<div class="text-center">
+							<span>$ {{ultimos[1].precio | number}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3" data-scrollmagic>
+					<div class="img_sub text-center">
+						<a href="#/item/{{ultimos[2].idCasa}}">
+							<img src="{{ultimos[2].img}}" alt="">
+						</a>
+						
+					</div>
+					<div class="content-down center">
+						<p>{{ultimos[2].sub}}...</p>
+						<p>{{ultimos[2].nombremunicipio}}</p>
+					</div>
+					<div class="content-front left">
+						<div class="text-center">
+							<span>$ {{ultimos[2].precio | number}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3" data-scrollmagic>
+					<div class="img_sub text-center">
+						<a href="#/item/{{ultimos[3].idCasa}}">
+							<img src="{{ultimos[3].img}}" alt="">
+						</a>
+					</div>
+					<div class="content-down center">
+						<p>{{ultimos[3].sub}}...</p>
+						<p>{{ultimos[3].nombremunicipio}}</p>
+					</div>
+					<div class="content-front left ">
+						<div class="text-center">
+							<span>$ {{ultimos[3].precio | number}}</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3" data-scrollmagic>
+					<div class="img_sub text-right">
+						<a href="#/item/{{ultimos[4].idCasa}}">
+							<img src="{{ultimos[4].img}}" alt="">
+						</a>
+						
+					</div>
+					<div class="content-down right">
+						<p>{{ultimos[4].sub}}...</p>
+						<p>{{ultimos[4].nombremunicipio}}</p>
+					</div>
+					<div class="content-front left-ult">
+						<div class="text-center ">
+							<span>$ {{ultimos[4].precio | number}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div  id="regiones">
+		<div class="title" data-scrollmagic>
+			<div>
+				<h1>
+					Propiedades en  Estado de México
+				</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="center-col">
+				<div class="col-lg-6 col-md-6 col-sm-6 text-center " data-scrollmagic >
+					<div class="img_sub">
+						<a href="#/filtros/1">
+							<img src="img/jilotepec.jpg" alt="">
+						</a>
+					</div>
+					<div class="content-name">
+						<div class=" ">
+							<span>Jilotepec</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 text-center "  data-scrollmagic>
+					<div class="img_sub">
+						<a href="#/filtros/2">
+							<img src="img/chapa.jpg" alt="">
+						</a>
+					</div>
+					
+					<div class="content-name">
+						<div class=" ">
+							<span>Chapa de Mota</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="center-col">
+				<div class="col-lg-6 col-md-6 col-sm-6 text-center "  data-scrollmagic>
+					<div class="img_sub">
+						<a href="#/filtros/3">
+							<img src="img/canalejas.jpg" alt="">
+						</a>
+					</div>
+					<div class="content-name">
+						<div class=" ">
+							<span>Canalejas</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 text-center " data-scrollmagic>
+					<div class="img_sub">
+						<a href="#/filtros/4">
+							<img src="img/villa.jpg" alt="">
+						</a>		
+					</div>
+					<div class="content-name">
+						<div class=" ">
+							<span>Villa del Carbón</span>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div class="parallax" id="us">
+		<div>
+			<div>
+				<h1 class="text-center">
+					¿Por qué buscar departamentos en  
+					Live<span>Once</span>?
+				</h1>
+				<p class="text-center">
+					Te brindamos el mejor servicio desde la comodidad de tu hogar para que encuentres la casa perfecta al mejor precio del mercado.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="parallax" id="action">
+		<div>
+			<div>
+				<h1 class="text-center">
+					¿Quieres publicar tu propiedad?
+				</h1>
+				<div class="center text-center">
+					<a href="">
+						Publica ahora mismo
+					</a>
+				</div>
+				<p class="text-center">
+					Puedes preguntar por nuestras ofertas, en todo el 
+					país al número 555 - 432 - 432
+				</p>
+			</div>
+		</div>
+	</div>

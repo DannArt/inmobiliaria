@@ -1,0 +1,100 @@
+
+	<div id="filters">
+		<div class="container-fluid">
+			<div class="row">
+				
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<div class="filter-box">
+						<ul>
+							<lh>
+								Habitaciones
+							</lh>
+							<li><a href="" ng-click="habitaciones($event)" value="1">1 Cuarto</a></li>
+							<li><a href="" ng-click="habitaciones($event)" value="2">2 Cuartos</a></li>
+							<li><a href="" ng-click="habitaciones($event)" value="3">3 Cuartos</a></li>
+							<li><a href="" ng-click="habitaciones($event)" value="4">4 Cuartos</a></li>
+							<li><a href="" ng-click="habitaciones($event)" value="5">5 o Más</a></li>
+						</ul>
+						<ul>
+							<lh>
+								Precios
+							</lh>
+							<li><a href="" ng-click="precios($event)" value="1">100,000 a 500,000</a></li>
+							<li><a href="" ng-click="precios($event)" value="2">500,000 a 1,000,000</a></li>
+							<li><a href="" ng-click="precios($event)" value="3">1,000,000 a 10,000,000</a></li>
+						</ul>
+						<ul>
+							<lh>
+								Baños
+							</lh>
+							<li><a href="" ng-click="banios($event)" value="1">1 Baño</a></li>
+							<li><a href="" ng-click="banios($event)" value="2">2 Baños</a></li>
+							<li><a href="" ng-click="banios($event)" value="3">3 Baños o Más</a></li>
+						</ul>
+						<ul>
+							<lh>
+								Terreno
+							</lh>
+							<li><a href="" ng-click="extension($event)" value="1">Hasta 100 m<sup>2</sup></a></li>
+							<li><a href="" ng-click="extension($event)" value="2">De 100 m2 hasta 500 m<sup>2</sup></a></li>
+							<li><a href="" ng-click="extension($event)" value="3">De 500 m2 hasta 1,000 m<sup>2</sup></a></li>
+							<li><a href="" ng-click="extension($event)" value="4">Más de 1,000 m<sup>2</sup></a></li>
+						</ul>
+						<ul>
+							<lh>
+								Municipio
+							</lh>
+							<li><a href="" ng-click="municipio($event)" value="1">Jilotepec</a></li>
+							<li><a href="" ng-click="municipio($event)" value="2">Chapa de Mota</a></li>
+							<li><a href="" ng-click="municipio($event)" value="3">Villa del Carbón</a></li>
+							<li><a href="" ng-click="municipio($event)" value="4">Canalejas</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-9 ">
+					
+					<div class="col-lg-4 col-md-4 col-sm-4 "  ng-repeat="h in casas track by $index">
+						
+						<div >
+							<a href="#/item/{{h.idCasa}}">
+								<img src="{{h.img}}" alt="" class="img-responsive">
+							</a>
+						</div>
+						<div class="content-box ">
+							<div class="c-left">
+								<div>
+									<div class="text-center">
+										<span>$ {{h.precio | number}}</span>
+									</div>
+								</div>	
+							</div>
+							<div class="c-rigth">
+								<div>
+									<div>
+										<h4>
+											{{h.direc}}
+										</h4>
+										<div>
+											<span>
+												{{h.extension}} m<sup>2</sup>
+											</span>|
+											<span>
+												{{h.cuartos}} recámaras
+											</span>|
+											<span>
+												{{h.banios}} baños
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+					</div>
+
+				</div>
+			</div>
+		</div>	
+	</div>

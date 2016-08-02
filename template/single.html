@@ -1,0 +1,137 @@
+
+<div id="single" ng-repeat="c in casa track by $index">
+	<div class="container" >
+		<div class="row">
+			<div class="col-lg-8 col-md-8 col-sm-8">
+				<div class="img-single">
+					<img src="{{c.img}}" class="img-responsive" alt="">
+				</div>
+				<div class="datos">
+					<h1>
+						Datos principales 
+					</h1>
+					<div class="content-datos">
+						
+							<ul >
+								<li>
+									<i class="fa fa-home" aria-hidden="true">
+									</i>
+									<span>
+										Terreno {{c.extension}} m<sup>2</sup>
+									</span>
+								</li>
+								<li>
+									<i class="fa fa-usd" aria-hidden="true"></i>
+									<span>
+										Precio {{c.precio | number}}
+									</span>
+								</li>
+								<li>
+									<i class="fa fa-bed" aria-hidden="true"></i>
+									<span>
+										Cuartos {{c.cuartos}}
+									</span>
+								</li>
+								<li>
+									<i class="fa fa-male" aria-hidden="true"></i>
+									<span>
+										Baños {{c.banios}}
+									</span>
+								</li>
+								
+							</ul>
+							<ul >
+								<li>
+									<i class="fa fa-car" aria-hidden="true"></i>
+									<span>
+										Estacionamiento {{c.estacionamiento}}
+									</span>
+								</li>
+								<li>
+									<i class="fa fa-tree" aria-hidden="true"></i>
+									<span>
+										Jardín {{c.jardin}}
+									</span>
+								</li>
+								<li>
+									<i class="fa fa-hourglass" aria-hidden="true"></i>
+									<span>
+										Antigüedad/años  {{c.antiguo}} 
+									</span>
+								</li>
+								<li>
+									<i class="fa fa-building" aria-hidden="true"></i>
+									<span>
+										Niveles {{c.pisos}}
+									</span>
+								</li>
+							</ul>
+						
+					</div>
+				</div>
+				<div class="ubicacion"  >
+					<h1>Ubicación</h1>
+					<div>
+						<p class="text-center">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+							{{c.direccion}}, {{c.nombremunicipio}}, Estado de México
+						</p>
+					</div>
+					<div id="mapa" >
+					<google-map center="map.center" 
+				    			zoom="map.zoom" 
+				    			draggable="true" 
+				    			options="map.options" 
+				    			control="map.control">
+						<marker coords="marker.coords" options="marker.options" idkey="marker.id" ></marker>        
+				    </google-map>
+					</div>
+				</div>
+				<div class="descripcion">
+					<h1>Descripción</h1>
+					<div class="content-descripcion">
+					
+							<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus tempora, culpa quod, autem corporis, ex pariatur excepturi perferendis necessitatibus doloremque modi illo esse similique fugit dolorem nulla voluptates. Porro, pariatur.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique id sapiente soluta, ducimus obcaecati enim quibusdam aliquam animi vero, ratione quis, magnam. Nesciunt, at. Mollitia voluptas quam id provident enim!
+							<br><br>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum suscipit libero quo cumque totam dolores ratione consequuntur nisi, maxime ullam, debitis adipisci dolorum fugit velit iusto commodi sequi consequatur exercitationem.
+							</p>
+							
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-4 col-md-4">
+				<div class="usuario">
+					<div>
+						Precio<span> $ {{c.precio | number}}</span>
+					</div>
+					<div>
+						<span>
+							{{c.direccion}}, {{c.nombremunicipio}}, Estado de México
+						</span>
+					</div>
+					<div>
+						<h2>
+							Contacto
+						</h2>
+						<ul>
+							<li>
+								<i class="fa fa-user" aria-hidden="true"></i>  LRD Inmuebles
+							</li>
+							<li>
+								<i class="fa fa-phone" aria-hidden="true"></i>  555-555-554
+							</li>
+							<li>
+								<i class="fa fa-envelope-o" aria-hidden="true"></i>  inmueblesLRD@gmail.com
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="space">
+		
+	</div>
