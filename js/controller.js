@@ -1,3 +1,4 @@
+var backendService = 'http://localhost:8888/pop/inmobiliaria-backend/indexcontroller.php';
 var controllers=angular.module('controllers',['google-maps']);
 
 controllers.controller("mapa_controller", ["$scope","$http" , function($scope, $http)
@@ -103,7 +104,7 @@ controllers.controller("mapa_controller", ["$scope","$http" , function($scope, $
   }]);
 controllers.controller("index_controller", ["$scope","$http" , function($scope, $http)
   {    
-  	$scope.url= "../dannart-backend/ventas/indexcontroller.php";
+  	$scope.url= backendService;
       $http.post($scope.url, {}).
        success(function(data, status) 
           {	
