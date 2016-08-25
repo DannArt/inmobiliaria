@@ -1,4 +1,5 @@
-var backendService = 'http://localhost:8888/pop/inmobiliaria-backend/';
+var backendService = 'http://micrositios.chailate.com/pop-backend/demo-bcasa-backend/';
+//var backendService = 'http://localhost:8888/pop/inmobiliaria-backend/';
 
 var controllers=angular.module('controllers',['google-maps']);
 
