@@ -1,4 +1,5 @@
-var backendService = 'http://localhost:8888/pop/inmobiliaria-backend/indexcontroller.php';
+var backendService = 'http://localhost:8888/pop/inmobiliaria-backend/';
+
 var controllers=angular.module('controllers',['google-maps']);
 
 controllers.controller("mapa_controller", ["$scope","$http" , function($scope, $http)
@@ -9,7 +10,7 @@ controllers.controller("mapa_controller", ["$scope","$http" , function($scope, $
              $scope.latitud = $scope.position.coords.latitude;
              $scope.longitud = $scope.position.coords.longitude;
        
-         $scope.url= "../dannart-backend/ventas/mapacontroller.php";
+         $scope.url= backendService + "mapacontroller.php";
          $http.post($scope.url, {"latitud":$scope.latitud,"longitud": $scope.longitud}).
            success(function(data, status) 
             { 
@@ -17,7 +18,7 @@ controllers.controller("mapa_controller", ["$scope","$http" , function($scope, $
                $scope.casas= data;
                $scope.status = status; 
             })
-      $scope.url= "../dannart-backend/ventas/filtercontroller.php";
+      $scope.url= backendService + "filtercontroller.php";
       $scope.municipio = function(event)
         {
           event.preventDefault();
@@ -104,7 +105,7 @@ controllers.controller("mapa_controller", ["$scope","$http" , function($scope, $
   }]);
 controllers.controller("index_controller", ["$scope","$http" , function($scope, $http)
   {    
-  	$scope.url= backendService;
+  	$scope.url= backendService + 'indexcontroller.php';
       $http.post($scope.url, {}).
        success(function(data, status) 
           {	
@@ -125,7 +126,7 @@ controllers.controller("index_controller", ["$scope","$http" , function($scope, 
              $scope.latitud = $scope.position.coords.latitude;
              $scope.longitud = $scope.position.coords.longitude;
        
-         $scope.url= "../dannart-backend/ventas/mapacontroller.php";
+         $scope.url= backendService + "mapacontroller.php";
          $http.post($scope.url, {"latitud":$scope.latitud,"longitud": $scope.longitud}).
            success(function(data, status) 
             { 
@@ -154,7 +155,7 @@ controllers.controller("index_controller", ["$scope","$http" , function($scope, 
 controllers.controller("single_controller",["$scope","$http","$routeParams", function($scope,$http,$routeParams){
 
   $scope.idCasa = $routeParams.idCasa;
-  $scope.url= "../dannart-backend/ventas/singlecontroller.php";
+  $scope.url= backendService + "singlecontroller.php";
     $http.post($scope.url, {"id":$scope.idCasa}).
      success(function(data, status) 
         { 
@@ -194,7 +195,7 @@ controllers.controller("filter_controller",["$scope","$http","$routeParams", fun
 
   $scope.idM = $routeParams.idMunicipio;
     $scope.filtro="municipios";
-    $scope.url= "../dannart-backend/ventas/filtercontroller.php";
+    $scope.url= backendService + "filtercontroller.php";
     $http.post($scope.url, {"id":$scope.idM, "filtro":$scope.filtro}).
      success(function(data, status) 
         { 
